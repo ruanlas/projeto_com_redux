@@ -12,3 +12,6 @@ export default function Routes(){
         </Switch>
     );
 }
+
+// json-server server.json -p 3333
+// sudo npm install -g json-server
