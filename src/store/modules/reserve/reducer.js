@@ -1,8 +1,8 @@
 
 export default function reserve(state = [], action){
     // console.log('CHEGOU');
-    console.log(action);
-    console.log(state); // state do próprio reserve
+    // console.log(action);
+    // console.log(state); // state do próprio reserve
     switch (action.type) {
         case 'ADD_RESERVE':
             return [ ...state, action.trip];
