@@ -29,8 +29,7 @@ export default function Home() {
                             <strong>{trip.title}</strong>
                             <span>Status {trip.stats ? 'Disponível':'Indisponível'}</span>
 
-                            <button type="button"
-                                onClick={() => {}}>
+                            <button type="button" onClick={() => {}}>
                                 <div>
                                     <MdFlightTakeoff size={16} color="#FFF"/>
                                 </div>
