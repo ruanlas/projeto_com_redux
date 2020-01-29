@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { MdFlightTakeoff } from 'react-icons/md';
 
-import { addReserve } from '../../store/modules/reserve/actions';
+import { addReserveRequest } from '../../store/modules/reserve/actions';
 import api from '../../services/api';
 
 import './style.css';
@@ -23,7 +23,7 @@ export default function Home() {
         
     }, []);
 
-    function handleAdd(trip){
+    function handleAdd(tripId){
         // console.log(trip);
         // dispara ação para o redux
 
@@ -31,7 +31,7 @@ export default function Home() {
         //         type: 'ADD_RESERVE',
         //         trip
         //     };
-        let action = addReserve(trip);
+        let action = addReserveRequest(tripId);
         dispatch(action);
     }
 
@@ -45,7 +45,7 @@ export default function Home() {
                             <strong>{trip.title}</strong>
                             <span>Status {trip.stats ? 'Disponível':'Indisponível'}</span>
 
-                            <button type="button" onClick={() => { handleAdd(trip) }}>
+                            <button type="button" onClick={() => { handleAdd(trip.id) }}>
                                 <div>
                                     <MdFlightTakeoff size={16} color="#FFF"/>
                                 </div>

@@ -5,7 +5,7 @@ export default function reserve(state = [], action){
     // console.log(action);
     // console.log(state); // state do próprio reserve
     switch (action.type) {
-        case 'ADD_RESERVE':
+        case 'ADD_RESERVE_SUCCESS':
             // let objTrip = {
             //     ...action.trip,
             //     amount: 1
