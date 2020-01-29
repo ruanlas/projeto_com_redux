@@ -14,17 +14,7 @@ export default function reserve(state = [], action){
 
             // retorna uma cópia do state 'manipulado', seguindo a idéia de imutabilidade
             return produce(state, draft => {
-                const tripIndex = draft.findIndex( trip => trip.id === action.trip.id );
-                
-                if(tripIndex >= 0){
-                    draft[tripIndex].amount += 1;
-                }else{
-                    let objTrip = {
-                        ...action.trip,
-                        amount: 1
-                    };
-                    draft.push(objTrip);
-                }
+                draft.push(action.trip);
             });
             // break;
         case 'REMOVE_RESERVE':
