@@ -14,4 +14,5 @@ export default function Routes(){
 }
 
 // json-server server.json -p 3333
+// json-server server.json -p 3333 -d 2000
 // sudo npm install -g json-server
